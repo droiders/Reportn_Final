@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+  <EditTextPreference android:title="Prénom"
+                      android:key="username" 
+                      android:summary="Entrez votre prénom"></EditTextPreference>
+  
+   <EditTextPreference android:title="Email"
+                      android:key="email" 
+                      android:summary="Entrez votre Email"></EditTextPreference>
+  
+ <!-- <CheckBoxPreference android:title="Rendre mon email publique"
+                      android:defaultValue="false"
+                      android:summary="Visible dans les rapports"
+                      android:key="pub" />
+                      
+                        -->  
+  
+ <!--    <ListPreference     android:title="Download Details"
+                      android:summary="Select the kind of data that you would like to download"
+                      android:key="downloadType"
+                      android:defaultValue="1"
+                      android:entries="@array/listArray"
+                      android:entryValues="@array/listValues" />   
+                      
+  -->  
+   <Preference
+    android:title="Recommander à un ami"
+    android:summary="Invitation par Email">
+
+    <intent
+             android:action="android.intent.action.VIEW"
+             android:targetPackage="com.android.orange"
+             android:targetClass="com.android.orange.MyEmailDemo" /> 
+
+  </Preference>
+  
+   <Preference
+    android:title="A propos"
+    android:summary="De l'application">
+
+    <intent
+             android:action="android.intent.action.VIEW"
+             android:targetPackage="com.android.orange"
+             android:targetClass="com.android.orange.APropos" /> 
+
+  </Preference>
+  
+   <Preference
+    android:title="Manuel d'utilisation"
+    android:summary="De l'application">
+
+    <intent
+             android:action="android.intent.action.VIEW"
+             android:targetPackage="com.android.orange"
+             android:targetClass="com.android.orange.UserGuide" /> 
+
+  </Preference>
+   
+</PreferenceScreen>

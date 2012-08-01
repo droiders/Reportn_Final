@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, DashBoardExampleActivity!</string>
+    <string name="app_name">reportn</string>
+
+    <string name="txtDemo">This is the DashBoard pattern example by Paresh N. Mayani @ www.technotalkative.com </string>
+    
+    <!-- Activity Titles -->
+    <string name="HomeActivityTitle">*** Premier essaie animation ***</string>
+    <string name="FeedbackActivityTitle">Feedback</string>
+    <string name="EclairActivityTitle">Signaler</string>
+    <string name="FroyoActivityTitle">Froyo 2.2</string>
+    <string name="GingerbreadActivityTitle">Rapports</string>
+    <string name="HoneycombActivityTitle">icon 02</string>
+    <string name="ICSActivityTitle">Infos</string>
+    <string name="JellyBeanActivityTitle">Paramétres</string>
+    <string
+        name="feedbacktitle">Completer le formulaire:
+    </string>
+    <string
+        name="feedbackname">Nom et prénom</string>
+    <string
+        name="feedbackemail">Email</string>
+    <string name="feedbackbody">Commentaires</string>
+    <string
+        name="feedbackresponse">Aimeriez-vous recevoir une réponse par Email?</string>
+    <string
+        name="feedbackbutton">Envoyer</string>
+    <string
+        name="feedbacktype">Enter feedback type</string>
+
+    
+   <string
+        name="buttontext_simpleemail">Send plain text</string>
+    <string
+        name="chooser">Send message using:</string>
+    <string
+        name="chooser_pic">Send picture using:</string>
+    <string
+        name="buttontext_simpleemail_chooser">Send a message (Choose app to send)
+    </string>
+    <string
+        name="buttontext_email">Send plaintext message (with supplied content)
+    </string>
+    <string
+        name="buttontext_feedback">Send feedback message (with form)
+    </string>
+    <string
+        name="buttontext_msg_pic">Send picture msg (with supplied content)
+    </string>
+    <string
+        name="email_message">This is my message body.\n\nCheers,\nMe
+    </string>
+    <string
+        name="email_subject">This is my subject</string>
+    <string
+        name="email_address">test@fakehost.com</string>
+    <string
+        name="email_address_cc">test_cc@fakehost.com</string>
+    <string
+        name="email_address_bcc">test_bcc@fakehost.com</string>
+    <string
+        name="feedbacktype1">Incendie</string>
+    <string
+        name="feedbacktype2">Inondations ds la rue</string>
+    <string
+        name="feedbacktype3">Affiche déchirée</string>
+    <string
+        name="feedbacktype4">Plaque de noms de rues</string>
+    <string
+        name="feedbackmessagebody_format">To: The %1$s Department\n\n %2$s\n\n %3$s (%4$s) - %5$s
+    </string>
+    <string
+        name="feedbackmessagebody_responseyes">Requires a response</string>
+    <string
+        name="feedbackmessagebody_responseno">Does not require a response</string>
+    <string
+        name="feedbackmessagesubject_format">Application Feedback (%1$s)</string>
+    <string
+        name="buttontext_invite">Invite Contacts</string>
+    <string
+        name="invitetypeprompt">Pick type of invite</string>
+    <string
+        name="invite_email_hint">Enter email</string>
+    <string
+        name="invitetype1">Coffee</string>
+    <string
+        name="invitetype2">Lunch</string>
+    <string
+        name="invitetype3">Walk Around the Block</string>
+    <string
+        name="invite_message_preview_title">Message to send</string>
+    <string
+        name="invite_email_label">Enter email</string>
+    <string
+        name="pick_email_label">Browse</string>
+    <string
+        name="invite_activity_title">Invite Someone to Something</string>
+    <string
+        name="message_preview">Message will go here</string>
+    <string
+        name="other">Other Contact Related Actions</string>
+<string name="quick_contact">Show Quick Contact Badge</string>
+<string name="pick_contact_for_badge">Pick Contact For Badge</string>
+</resources>
