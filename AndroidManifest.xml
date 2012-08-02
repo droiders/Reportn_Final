@@ -12,14 +12,16 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    
+
     <application
         android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        android:theme="@android:style/Theme.Light.NoTitleBar" 
+        >
        
         <activity android:name=".SplashActivity"
-        android:theme="@android:style/Theme.NoTitleBar">
+        android:theme="@android:style/Theme.NoTitleBar"
+        android:screenOrientation="portrait">
         <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,103 +30,126 @@
          </activity>
         <activity
             android:name=".HomeActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
             
         </activity>
         
         <activity
             android:name=".FeedbackActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
         </activity>
         
          <activity
             android:name=".Activity_Eclair"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
         </activity>
         
          <activity
             android:name=".Activity_Froyo"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
         </activity>
         
         <activity
             android:name=".Activity_Gingerbread"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
         </activity>
         
         <activity
             android:name=".Activity_Honeycomb"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
         </activity>
         
         <activity
             android:name=".Activity_ICS"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
         </activity>
         
         <activity
             android:name=".Activity_JellyBean"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
         </activity>  
         
         <activity
             android:name=".FormActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
         </activity>  
        
         <activity
             android:name=".SimpleRSSReaderActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
         </activity>
         
        
-        <activity android:name=".RSSExampleActivity" android:label="@string/app_name" android:configChanges="keyboard|keyboardHidden|orientation"></activity>
+        <activity android:name=".RSSExampleActivity" android:label="@string/app_name" android:screenOrientation="portrait""></activity>
         
-        <activity android:name=".StoryActivity" android:label="@string/app_name" android:configChanges="keyboard|keyboardHidden|orientation"></activity>
+        <activity android:name=".StoryActivity" android:label="@string/app_name" android:screenOrientation="portrait"></activity>
    
         
          
         <activity
             android:name=".ReportActivity"
-            android:label="@string/app_name" />
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
 
         <uses-library android:name="com.google.android.maps" />
 
         <activity
             android:name=".takephoto"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".galery"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
         </activity>
-       <activity android:name=".AppPreferences" android:label="@string/app_name" android:theme="@android:style/Theme.Light">
+       <activity android:name=".AppPreferences" android:label="@string/app_name" android:theme="@android:style/Theme.Light" android:screenOrientation="portrait">
            </activity>
            
       
            
-       <activity android:name=".MyEmailDemo" android:label="@string/app_name" >
+       <activity android:name=".MyEmailDemo" android:label="@string/app_name" android:screenOrientation="portrait" >
            </activity>
        
-       <activity android:name=".APropos" android:label="@string/app_name" >
+       <activity android:name=".APropos" android:label="@string/app_name" android:screenOrientation="portrait" >
            </activity>
        
-       <activity android:name=".UserGuide" android:label="@string/app_name" >
+       <activity android:name=".UserGuide" android:label="@string/app_name" android:screenOrientation="portrait" >
            </activity>
        
        <activity
             android:name=".AddDetail"
-            android:label="@string/title_activity_add_detail" >
+            android:label="@string/title_activity_add_detail" 
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".fullscreen"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".SubmitReport"
-            android:label="@string/title_activity_submit_report" >
+            android:label="@string/title_activity_submit_report" 
+            android:screenOrientation="portrait">
             
         </activity>
+        
+        
+        <activity
+    
+    android:name="ActionBarActivity"
+    android:screenOrientation="portrait">
        
+    </activity>
     </application>
 </manifest>
