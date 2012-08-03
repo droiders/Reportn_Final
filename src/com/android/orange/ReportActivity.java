@@ -205,6 +205,17 @@ public class ReportActivity extends MapActivity implements
 	  
   }
     
+  public double getLatitude(){
+	  
+	  return lat;
+  }
+  
+ public double getLongitude(){
+	  
+	  return lng;
+  }
+  
+  
     private Handler handler = new Handler() {
 
     	  public void handleMessage(android.os.Message msg) {

@@ -42,7 +42,7 @@ public class FormActivity extends MapActivity {
 		
 		setContentView(R.layout.form);
 		//txt=(TextView) findViewById(R.id.adress);
-		mapView = (MapView) this.findViewById(R.id.mapView1);
+		mapView = (MapView) this.findViewById(R.id.map);
 		
 		mapView.setSatellite(true);
 		double lat = pa.getLatitude();
