@@ -29,6 +29,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -56,18 +57,22 @@ public class ReportActivity extends MapActivity implements
     double lng0;
     double tmp1,tmp2;
     GeoPoint pp = null;
-    EditText text;
+    static GeoPoint pt;
+    static TextView text;
     int CAMERA_PIC_REQUEST = 1337;
+    
+    
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
+//	setContentView(R.layout.activity_report);
 	setContentView(R.layout.activity_report);
 	mapView = (MapView) this.findViewById(R.id.map);
 	//mapView.setStreetView(true);
 	mapView.setBuiltInZoomControls(true);
 	
-	text= (EditText)findViewById(R.id.adresse);
+	text= (TextView)findViewById(R.id.adresse);
 	lm = (LocationManager) this.getSystemService(LOCATION_SERVICE);
 	lm.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10000, 0, this);
 	lm.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 10000, 0,
@@ -121,7 +126,6 @@ public class ReportActivity extends MapActivity implements
 	   	                    public void onClick(DialogInterface dialog, int which) {
 	   	                    	Intent i = new Intent(getApplicationContext(), takephoto.class);
 	   	            			startActivity(i);
-	   	            			finish();
 	   	                    }
 	   	                });
 
@@ -196,13 +200,10 @@ public class ReportActivity extends MapActivity implements
     public void onStatusChanged(String provider, int status, Bundle extras) {
     }
     
-    public static double getLatitude(){
-		return lat;
-		}
-    public static double getLongitude(){
-		return lng;
-		}
-   
+  public static String getadresse(){
+	  return text.getText().toString();
+	  
+  }
     
     private Handler handler = new Handler() {
 
@@ -345,10 +346,38 @@ public class ReportActivity extends MapActivity implements
     		      else if (action==MotionEvent.ACTION_UP && inDrag!=null) {
     		        dragImage.setVisibility(View.GONE);
     		        
-    		        GeoPoint pt=mapView.getProjection().fromPixels(x-xDragTouchOffset,
+    		        pt=mapView.getProjection().fromPixels(x-xDragTouchOffset,
     		                                                   y-yDragTouchOffset);
     		        OverlayItem toDrop=new OverlayItem(pt, inDrag.getTitle(),
     		                                           inDrag.getSnippet());
+    		        
+    		        
+    		        Geocoder geoCoder = new Geocoder(
+    	                    getBaseContext(), Locale.getDefault());
+    	                try {
+    	                    List<Address> addresses = geoCoder.getFromLocation(
+    	                        pt.getLatitudeE6()  / 1E6, 
+    	                        pt.getLongitudeE6() / 1E6, 1);
+    	 
+    	                    String add = "";
+    	                    if (addresses.size() > 0) 
+    	                    {
+    	                        for (int i=0; i<addresses.get(0).getMaxAddressLineIndex(); 
+    	                             i++)
+    	                           add += addresses.get(0).getAddressLine(i) + "\n";
+    	                    }
+    	                    text.setText(add);
+    	 
+    	                    Toast.makeText(getBaseContext(), add, Toast.LENGTH_SHORT).show();
+    	                }
+    	                catch (IOException e) {                
+    	                    e.printStackTrace();
+    	                }   
+    		      
+    	                    /*Toast.makeText(getBaseContext(), 
+    	                        pt.getLatitudeE6() / 1E6 + "," + 
+    	                        pt.getLongitudeE6() /1E6 , 
+    	                        Toast.LENGTH_SHORT).show();*/
     		        
     		        items.add(toDrop);
     		        populate();
