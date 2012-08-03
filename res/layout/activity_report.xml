@@ -1,35 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content" android:layout_height="wrap_content">
-        <com.google.android.maps.MapView
-                android:id="@+id/map" android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:apiKey="0AOcNg3jtfznTAzqBVVN0ClQywGpJPFVtouDDug"
-                android:clickable="true" />
-        <ImageView android:id="@+id/drag" android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:src="@drawable/pushpin"
-                android:visibility="gone" />
-        <ImageButton
-	    android:id="@+id/button_camera"
-	    android:src="@android:drawable/ic_menu_camera"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignParentBottom="true"
-	    android:layout_alignParentRight="true"
-	    android:text="Button" />
-<EditText
-	    android:id="@+id/adresse"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignParentLeft="true"
-	    android:layout_alignParentRight="true"
-	    android:layout_alignParentTop="true"
-	    android:ems="10" >
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp" >
 
-	    <requestFocus android:focusable="false" />
-	</EditText>
-	
+ <ImageView
+        android:id="@+id/drag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pushpin"
+        android:visibility="gone" />
 
+    <requestFocus android:focusable="false" />
+
+    <LinearLayout
+          android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/adresse"
+            android:layout_width="252dp"
+            android:layout_height="50dp"
+            android:background="@drawable/back"
+            android:shadowColor="@android:color/darker_gray"
+            android:text="Votre Position est: "
+            android:textSize="15dp"
+            android:gravity="center" />
+
+</LinearLayout>
+
+    <ImageButton
+        android:id="@+id/button_camera"
+        android:layout_width="65dp"
+        android:layout_height="54dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@android:drawable/ic_menu_camera"
+        android:text="Button" />
+    
+    <com.google.android.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="5dp"
+        android:apiKey="0AOcNg3jtfznTAzqBVVN0ClQywGpJPFVtouDDug"
+        android:clickable="true" />
 
 </RelativeLayout>
-
-
